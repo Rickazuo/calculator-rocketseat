@@ -1,0 +1,11 @@
+.headerCalculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 22px 0px 18px;
+  gap: 8px;
+  background: red;
+  height: 5.375rem;
+  margin: 3.5rem 2.0625rem 1.625rem 2.0625rem;
+}

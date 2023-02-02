@@ -1,11 +1,55 @@
 .headerCalculator {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   align-items: center;
   padding: 0px 22px 0px 18px;
   gap: 8px;
-  background: red;
+  background: var(--dark-700);
   height: 5.375rem;
   margin: 3.5rem 2.0625rem 1.625rem 2.0625rem;
+}
+
+.historic {
+  background: var(--dark-700);
+  width: 15.5rem;
+  height: 1.75rem;
+  color: #6b6b6b;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.225rem;
+  text-align: right;
+
+  /* Font */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+
+  background: var(--dark-700);
+  width: 15.5rem;
+  height: 3.125rem;
+
+  /* Font */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+}
+
+.signal {
+  background: var(--dark-700);
+  color: #6b6b6b;
+}
+
+.value {
+  background: var(--dark-700);
+  color: #ebebeb;
 }

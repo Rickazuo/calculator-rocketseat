@@ -1,9 +1,18 @@
 * {
-  max-width: 1280px;
+  --purple-500: #807ece;
+  --purple-600: #7f45e2;
+  --purple-700: #975dfa;
+  --purple-800: #462878;
+  --dark-700: #2d2a37;
+  --white-200: #ebebeb;
   margin: 0;
   padding: 0;
   text-align: center;
-  background: #807ece;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background: var(--purple-500);
 }
 
 .container {
@@ -11,5 +20,5 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
 }
-/*  */

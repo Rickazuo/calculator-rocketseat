@@ -1,8 +1,6 @@
 import styles from "./styles.module.css";
 
-const operations = ["1", "+", "1"];
-
-export default function CalculatorHeader() {
+export default function CalculatorHeader({ operations, result }) {
   return (
     <header className={styles.headerCalculator}>
       <div className={styles.historic}>
@@ -12,7 +10,7 @@ export default function CalculatorHeader() {
       </div>
       <div className={styles.result}>
         <div className={styles.signal}>=</div>
-        <div className={styles.value}>2</div>
+        <div className={styles.value}>{result}</div>
       </div>
     </header>
   );

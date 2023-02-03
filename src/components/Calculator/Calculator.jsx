@@ -13,14 +13,15 @@ export default function Calculator({ buttons }) {
         {buttons.map((rows) => (
           <div className={styles.buttonsContainer}>
             {rows.map((button) => {
-              console.log(buttons);
-              return <div>{button.value}</div>;
+              return (
+                <Button styleName={button?.styles ? button.styles : undefined}>
+                  {button?.tag ? button.tag : button.value}
+                </Button>
+              );
             })}
           </div>
         ))}
       </main>
-
-      <Button>1</Button>
     </div>
   );
 }

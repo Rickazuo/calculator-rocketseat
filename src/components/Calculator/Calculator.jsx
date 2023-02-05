@@ -89,6 +89,10 @@ export default function Calculator({ buttons }) {
         setOperations([]);
         return true;
       case operation === "=":
+        if(result === "") {
+          alert("Before calculate you need add a number")
+          return true
+        }
         returnResult("=", operations);
         return true;
       case operation === "%":

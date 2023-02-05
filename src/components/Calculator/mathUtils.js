@@ -68,3 +68,23 @@ export const calculatePercentual = (operations, lastNumber) => {
         );
     }
 };
+
+export const findHowManyDot = (string) => {
+    let count = 0;
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === ".") count++;
+    }
+
+    return count;
+};
+
+export const convertFloatToString = (string) => {
+    const isFloat =
+        typeof string === "number" &&
+        Number(string) === string &&
+        string % 1 !== 0;
+
+    if (isFloat) return string.toFixed(2);
+    else if (!string) return 0;
+    else return string;
+};

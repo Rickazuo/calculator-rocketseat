@@ -5,7 +5,12 @@ import Button from "../Button/Button";
 
 import styles from "./styles.module.css";
 
-import { calculate, calculatePercentual } from "./mathUtils";
+import {
+    calculate,
+    calculatePercentual,
+    findHowManyDot,
+    convertFloatToString,
+} from "./mathUtils";
 
 const overFlow = 15;
 const numberOverflow = 1000000000;
@@ -26,14 +31,17 @@ export default function Calculator({ buttons }) {
             } else {
                 operationsResult = calculate(operations);
             }
-            setResult(operationsResult.toFixed(2));
+
+            if (findHowManyDot(convertFloatToString(result)))
+                setResult(operationsResult.toFixed(2));
+            else setResult(operationsResult);
+
             setOperations([]);
         }
     };
 
     const restrictionBeforeCalculate = (operation, operations) => {
         const cantUseOperation = result === "";
-
         switch (true) {
             case operation === "CE":
                 setResult("");
@@ -92,6 +100,13 @@ export default function Calculator({ buttons }) {
 
             setResult("");
         } else {
+            if (
+                value === "," &&
+                findHowManyDot(convertFloatToString(result)) >= 1
+            ) {
+                alert("This number is already a float");
+                return;
+            }
             digitedNumber(value);
         }
     };

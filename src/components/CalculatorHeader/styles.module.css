@@ -1,7 +1,6 @@
 .headerCalculator {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
   align-items: center;
   padding: 0px 22px 0px 18px;
   gap: 8px;

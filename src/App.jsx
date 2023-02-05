@@ -1,4 +1,5 @@
-import "./App.css";
+import styles from "./App.module.css";
+
 import percent from "./assets/percent.png";
 import divide from "./assets/divide.png";
 import x from "./assets/x.png";
@@ -48,8 +49,13 @@ const buttons = [
 
 function App() {
   return (
-    <div className="container">
-      <Calculator buttons={buttons} />
+    <div className={styles.container}>
+      <div className={styles.containerCalculator}>
+        <Calculator buttons={buttons} />
+      </div>
+      <footer className={styles.footer}>
+        Made by <a href="https://gsajulia.github.io/">Julia </a>and <a href="https://rickazuo.github.io/portfolio/">Ricardo</a>
+      </footer>
     </div>
   );
 }
